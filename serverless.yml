@@ -1,4 +1,4 @@
-service: myserverlessproject2
+service: fullstacksolarapp
 
 provider:
     name: aws
@@ -10,7 +10,7 @@ plugins:
     - serverless-s3-sync
 
 custom:
-    bucketName: my-serverless-react-app-20210427
+    bucketName: ${self:service}-${opt:stage, self:provider.stage}
     s3Sync:
         - bucketName: ${self:custom.bucketName}
           localDir: build/
