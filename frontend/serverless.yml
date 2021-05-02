@@ -3,7 +3,6 @@ service: fullstacksolarapp
 provider:
     name: aws
     runtime: nodejs12.x
-    profile: serverlessUser
     region: us-west-2
 
 plugins:

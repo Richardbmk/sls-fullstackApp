@@ -1,13 +1,12 @@
 {
   "service": {
-    "service": "myserverlessproject2",
+    "service": "fullstacksolarapp",
     "serviceObject": {
-      "name": "myserverlessproject2"
+      "name": "fullstacksolarapp"
     },
     "provider": {
       "name": "aws",
       "runtime": "nodejs12.x",
-      "profile": "serverlessUser",
       "region": "us-west-2",
       "stage": "dev",
       "variableSyntax": "\\${([^{}:]+?(?:\\(|:)(?:[^:{}][^{}]*?)?)}",
@@ -88,7 +87,7 @@
           "ReactAppBucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-              "BucketName": "my-serverless-react-app-20210427",
+              "BucketName": "fullstacksolarapp-dev",
               "AccessControl": "PublicRead",
               "WebsiteConfiguration": {
                 "IndexDocument": "index.html",
@@ -111,7 +110,7 @@
                     "Action": [
                       "s3:GetObject"
                     ],
-                    "Resource": "arn:aws:s3:::my-serverless-react-app-20210427/*"
+                    "Resource": "arn:aws:s3:::fullstacksolarapp-dev/*"
                   }
                 ]
               }
@@ -123,7 +122,7 @@
               "DistributionConfig": {
                 "Origins": [
                   {
-                    "DomainName": "my-serverless-react-app-20210427.s3.amazonaws.com",
+                    "DomainName": "fullstacksolarapp-dev.s3.amazonaws.com",
                     "Id": "ReactApp",
                     "CustomOriginConfig": {
                       "HTTPPort": 80,
@@ -171,9 +170,6 @@
           "ServerlessDeploymentBucketName": {
             "Value": {
               "Ref": "ServerlessDeploymentBucket"
-            },
-            "Export": {
-              "Name": "sls-myserverlessproject2-dev-ServerlessDeploymentBucketName"
             }
           }
         }
@@ -262,10 +258,10 @@
       }
     },
     "custom": {
-      "bucketName": "my-serverless-react-app-20210427",
+      "bucketName": "fullstacksolarapp-dev",
       "s3Sync": [
         {
-          "bucketName": "my-serverless-react-app-20210427",
+          "bucketName": "fullstacksolarapp-dev",
           "localDir": "build/"
         }
       ]
@@ -280,7 +276,7 @@
         "ReactAppBucket": {
           "Type": "AWS::S3::Bucket",
           "Properties": {
-            "BucketName": "my-serverless-react-app-20210427",
+            "BucketName": "fullstacksolarapp-dev",
             "AccessControl": "PublicRead",
             "WebsiteConfiguration": {
               "IndexDocument": "index.html",
@@ -303,7 +299,7 @@
                   "Action": [
                     "s3:GetObject"
                   ],
-                  "Resource": "arn:aws:s3:::my-serverless-react-app-20210427/*"
+                  "Resource": "arn:aws:s3:::fullstacksolarapp-dev/*"
                 }
               ]
             }
@@ -315,7 +311,7 @@
             "DistributionConfig": {
               "Origins": [
                 {
-                  "DomainName": "my-serverless-react-app-20210427.s3.amazonaws.com",
+                  "DomainName": "fullstacksolarapp-dev.s3.amazonaws.com",
                   "Id": "ReactApp",
                   "CustomOriginConfig": {
                     "HTTPPort": 80,
@@ -384,7 +380,7 @@
     "isDashboardMonitoringPreconfigured": false
   },
   "package": {
-    "artifactDirectoryName": "serverless/myserverlessproject2/dev/1619597178872-2021-04-28T08:06:18.872Z",
+    "artifactDirectoryName": "serverless/fullstacksolarapp/dev/1619967502335-2021-05-02T14:58:22.335Z",
     "artifact": ""
   }
 }
