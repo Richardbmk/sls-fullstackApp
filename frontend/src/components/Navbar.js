@@ -29,7 +29,7 @@ export default class Navbar extends Component {
                                 <a href="/register" className="button is-primary">
                                     <strong>Sign up</strong>
                                 </a>
-                                <a href="/register" className="button is-light">
+                                <a href="/login" className="button is-light">
                                     Log in
                                 </a>
                             </div>

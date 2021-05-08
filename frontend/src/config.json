@@ -1,5 +1,5 @@
 {
     "api": {
-        "invokeUrl": "https://dev-recipeapi.iotcloudsolutions.com/"
+        "invokeUrl": "https://ifksgbex1e.execute-api.eu-west-2.amazonaws.com/dev/"
     }
 }
