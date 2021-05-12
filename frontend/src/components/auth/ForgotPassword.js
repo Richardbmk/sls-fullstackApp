@@ -3,8 +3,8 @@ import FormErrors from '../FormErrors';
 import Validate from '../utility/FormValidation';
 import { Auth } from 'aws-amplify';
 
-class LogIn extends Component {
-    
+class ForgotPassword extends Component {
+
     state = {
 
     };
@@ -13,7 +13,7 @@ class LogIn extends Component {
 
     };
 
-    handleSubmit = async event => {
+    forgotPasswordHandler = async event => {
 
         //Form validation
 
@@ -29,55 +29,47 @@ class LogIn extends Component {
         return (
             <section className="section auth">
                 <div className="container">
-                    <h1>Log In</h1>
+                    <h1>Forgot your password?</h1>
+                    <p>
+                        Please enter the email address associated with your account and we'll
+                        email you a password reset link.
+                    </p>
                     <FormErrors formErrors={this.state.errors} />
 
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.forgotPasswordHandler}>
                         <div className="field">
-                            <p className="control">
-                            <input 
-                                className="input" 
-                                type="text"
-                                id="username"
-                                aria-describedby="usernameHelp"
-                                placeholder="Enter username or email"
-                                value={this.state.username}
-                                onChange={this.onInputChange}
-                            />
-                            </p>
-                        </div>
-                        <div className="field">
-                            <p className="control has-icons-left">
-                            <input 
-                                className="input" 
-                                type="password"
-                                id="password"
-                                placeholder="Password"
-                                value={this.state.password}
+                            <p className="control has-icons-left has-icons-right">
+                            <input
+                                type="email"
+                                className="input"
+                                id="email"
+                                aria-describedby="emailHelp"
+                                placeholder="Enter email"
+                                value={this.state.email}
                                 onChange={this.onInputChange}
                             />
                             <span className="icon is-small is-left">
-                                <i className="fas fa-lock"></i>
+                                <i className="fas fa-envelope"></i>
                             </span>
                             </p>
                         </div>
                         <div className="field">
                             <p className="control">
-                            <a href="/forgotpassword">Forgot password?</a>
+                                <a href="/forgotpassword">Forgot password?</a>
                             </p>
                         </div>
                         <div className="field">
                             <p className="control">
                             <button className="button is-success">
-                                Login
+                                Submit
                             </button>
                             </p>
                         </div>
                     </form>
                 </div>
             </section>
-        )
+        );
     }
 }
 
-export default LogIn;
+export default ForgotPassword;
