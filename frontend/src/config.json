@@ -1,5 +1,10 @@
 {
     "api": {
-        "invokeUrl": "https://ifksgbex1e.execute-api.eu-west-2.amazonaws.com/dev/"
+        "invokeUrl": "https://sfoi29ioksjd.execute-api.eu-west-2.amazonaws.com/dev/"
+    },
+    "cognito": {
+        "REGION": "regios_here",
+        "USER_POOL_ID": "exx-xx-2_29384232",
+        "APP_CLIENT_ID": "iew928923092309rjlkdfsfn"
     }
 }
