@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Auth } from 'aws-amplify';
 
 export default class Navbar extends Component {
     render() {
@@ -25,6 +26,11 @@ export default class Navbar extends Component {
 
                     <div className="navbar-end">
                         <div className="navbar-item">
+                            {this.props.auth.isAuthenticated && this.props.auth.user && (
+                                <p>
+                                Hello {this.props.auth.user.username}
+                                </p>
+                            )}
                             <div className="buttons">
                                 <a href="/register" className="button is-primary">
                                     <strong>Sign up</strong>
