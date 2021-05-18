@@ -1,4 +1,4 @@
-h1{
+h1 {
   font-size: 2em;
 }
 
@@ -33,7 +33,6 @@ h1{
   flex-shrink: 0 !important;
   box-shadow: none !important;
   padding: 0 !important;
-
 }
 
 .navbar-item {
@@ -51,4 +50,14 @@ h1{
 
 body {
   visibility: visible !important;
+}
+
+
+.auth form {
+  margin-top: 1em;
+  max-width: 50%;
+}
+
+.buttons {
+  margin-left: 1em;
 }
